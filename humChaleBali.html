@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bali June 2025 — Our Trip 🌴</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ink:#16110A;
+  --ink2:#3D3328;
+  --muted:#7A6E63;
+  --line:rgba(22,17,10,.1);
+  --sand:#F7F1E6;
+  --sand2:#EDE4D3;
+  --sand3:#E2D5C0;
+  --ocean:#1A5C82;
+  --ocean2:#2878A8;
+  --ocean-pale:#D8EDF8;
+  --jungle:#285C3A;
+  --jungle2:#377A4E;
+  --jungle-pale:#D3EBD8;
+  --amber:#9B6B1A;
+  --amber-pale:#FAF0D4;
+  --dusk:#3B2870;
+  --dusk2:#5540A8;
+  --dusk-pale:#E6E1F8;
+  --rust:#A84020;
+  --rust2:#CC5530;
+  --rust-pale:#FAE6DC;
+  --slate:#4A4A4A;
+  --slate-pale:#EBEBEB;
+  --r:14px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--sand);color:var(--ink);overflow-x:hidden;cursor:default}
+
+/* ═══════════════ HERO ═══════════════ */
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;
+  justify-content:flex-end;padding:0;
+  position:relative;overflow:hidden;background:#0B2A3D;
+}
+.hero-art{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 100% 70% at 70% 0%,#1A5C82 0%,transparent 55%),
+    radial-gradient(ellipse 80% 80% at -10% 100%,#0D3D58 0%,transparent 60%),
+    radial-gradient(ellipse 60% 50% at 100% 80%,#285C3A22 0%,transparent 50%),
+    linear-gradient(170deg,#0B2A3D 0%,#133A54 50%,#0B2A3D 100%);
+}
+/* animated dots */
+.hero-dots{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(255,255,255,.12) 1px,transparent 1px);
+  background-size:28px 28px;
+  mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,black,transparent);
+}
+/* palm silhouette shapes */
+.palm{position:absolute;pointer-events:none;opacity:.07}
+.palm-l{bottom:-20px;left:-40px;width:340px;height:340px;
+  background:radial-gradient(ellipse 30% 90% at 80% 100%,#7FC9A0,transparent),
+              radial-gradient(ellipse 20% 70% at 30% 90%,#7FC9A0,transparent);
+  border-radius:50%;transform:rotate(-20deg)}
+.palm-r{bottom:-40px;right:-60px;width:380px;height:380px;
+  background:radial-gradient(ellipse 25% 80% at 30% 95%,#7FC9A0,transparent),
+              radial-gradient(ellipse 15% 60% at 70% 85%,#7FC9A0,transparent);
+  border-radius:50%;transform:rotate(15deg)}
+/* horizon line */
+.horizon{position:absolute;bottom:0;left:0;right:0;height:180px;
+  background:linear-gradient(to top,rgba(245,235,215,.08),transparent)}
+
+.hero-body{
+  position:relative;z-index:2;
+  padding:clamp(2rem,6vw,5rem) clamp(1.5rem,5vw,5rem) clamp(3rem,7vw,5.5rem);
+  max-width:900px;
+}
+.hero-eyebrow{
+  font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(255,255,255,.45);font-weight:400;margin-bottom:1.2rem;
+  opacity:0;animation:up .7s .1s ease forwards;
+}
+.hero-h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.8rem,10vw,8rem);
+  font-weight:600;line-height:.92;color:#fff;
+  opacity:0;animation:up .8s .25s ease forwards;
+}
+.hero-h1 em{
+  display:block;font-style:italic;font-weight:400;
+  color:#F2C96A;font-size:.72em;
+}
+.hero-desc{
+  margin:1.8rem 0 2.2rem;
+  font-size:clamp(.85rem,1.5vw,1rem);font-weight:300;
+  color:rgba(255,255,255,.6);line-height:1.75;max-width:520px;
+  opacity:0;animation:up .8s .4s ease forwards;
+}
+.hero-tags{
+  display:flex;flex-wrap:wrap;gap:.5rem;
+  opacity:0;animation:up .8s .55s ease forwards;
+}
+.htag{
+  font-size:.72rem;padding:.35rem .9rem;border-radius:100px;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  color:rgba(255,255,255,.85);letter-spacing:.03em;
+}
+
+/* ═══════════════ NAV TABS ═══════════════ */
+.sticky-nav{
+  position:sticky;top:0;z-index:100;
+  background:var(--sand);border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:0;overflow-x:auto;
+  scrollbar-width:none;box-shadow:0 2px 16px rgba(0,0,0,.07);
+}
+.sticky-nav::-webkit-scrollbar{display:none}
+.nav-tab{
+  flex-shrink:0;font-size:.72rem;font-weight:500;padding:.85rem 1.2rem;
+  border:none;background:transparent;color:var(--muted);cursor:pointer;
+  letter-spacing:.04em;transition:all .2s;border-bottom:2px solid transparent;
+  white-space:nowrap;
+}
+.nav-tab:hover{color:var(--ink)}
+.nav-tab.active{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* ═══════════════ SECTIONS ═══════════════ */
+.section{display:none;padding:2.5rem 1.5rem 5rem;max-width:1100px;margin:0 auto}
+.section.visible{display:block}
+
+.sec-heading{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.8rem,4vw,2.6rem);font-weight:600;
+  color:var(--ink);margin-bottom:.4rem;
+}
+.sec-sub{font-size:.8rem;color:var(--muted);margin-bottom:2rem;letter-spacing:.04em}
+
+/* ═══════════════ ITINERARY GRID ═══════════════ */
+.filter-row{display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:2rem}
+.ftab{
+  font-size:.7rem;font-weight:500;padding:.35rem .9rem;border-radius:100px;
+  border:1px solid var(--line);background:transparent;color:var(--muted);
+  cursor:pointer;transition:all .2s;letter-spacing:.03em;
+}
+.ftab:hover{background:var(--sand2);color:var(--ink)}
+.ftab.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+.day-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem}
+.day-card{
+  background:#fff;border-radius:var(--r);border:1px solid var(--line);
+  overflow:hidden;transition:transform .2s,box-shadow .2s;
+  opacity:0;animation:cardUp .5s ease forwards;
+}
+.day-card:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(0,0,0,.09)}
+.day-card.hidden{display:none}
+
+.card-bar{height:3px;width:100%}
+.bar-travel{background:linear-gradient(90deg,var(--slate),#888)}
+.bar-cult  {background:linear-gradient(90deg,var(--jungle),var(--jungle2))}
+.bar-photo {background:linear-gradient(90deg,var(--amber),#C8921E)}
+.bar-adv   {background:linear-gradient(90deg,var(--rust),var(--rust2))}
+.bar-night {background:linear-gradient(90deg,var(--dusk),var(--dusk2))}
+.bar-mixed {background:linear-gradient(90deg,var(--ocean),var(--ocean2))}
+
+.card-top{padding:1rem 1.1rem .8rem;border-bottom:1px solid var(--line);display:flex;gap:.8rem;align-items:flex-start}
+.day-pill{
+  font-size:.6rem;font-weight:500;padding:.28rem .7rem;border-radius:100px;
+  white-space:nowrap;flex-shrink:0;margin-top:2px;letter-spacing:.03em;
+}
+.pill-travel{background:var(--slate-pale);color:var(--slate)}
+.pill-cult  {background:var(--jungle-pale);color:var(--jungle)}
+.pill-photo {background:var(--amber-pale);color:var(--amber)}
+.pill-adv   {background:var(--rust-pale);color:var(--rust)}
+.pill-night {background:var(--dusk-pale);color:var(--dusk)}
+.pill-mixed {background:var(--ocean-pale);color:var(--ocean)}
+
+.card-title{font-size:.92rem;font-weight:500;color:var(--ink);line-height:1.3}
+.card-sub  {font-size:.68rem;color:var(--muted);margin-top:2px}
+
+.card-body{padding:.9rem 1.1rem}
+.tp-row{display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem}
+.tp{font-size:.62rem;font-weight:500;padding:.22rem .6rem;border-radius:100px;letter-spacing:.02em}
+.tp-s{background:var(--jungle-pale);color:var(--jungle)}
+.tp-c{background:var(--ocean-pale);color:var(--ocean)}
+.tp-g{background:var(--rust-pale);color:var(--rust)}
+.tp-w{background:var(--slate-pale);color:var(--slate)}
+
+.act{display:flex;gap:.55rem;margin-bottom:.6rem;align-items:flex-start}
+.act:last-of-type{margin-bottom:0}
+.ai{font-size:.8rem;flex-shrink:0;margin-top:1px}
+.at{font-size:.75rem;color:#4A3F35;line-height:1.55}
+.at strong{font-weight:500;color:var(--ink)}
+
+.ctip{
+  font-size:.68rem;color:var(--muted);line-height:1.5;
+  background:var(--sand);border-radius:7px;padding:.55rem .75rem;
+  margin-top:.75rem;border-left:2px solid var(--amber);
+}
+
+/* ═══════════════ STAYS ═══════════════ */
+.stay-timeline{
+  display:flex;border-radius:10px;overflow:hidden;
+  border:1px solid var(--line);margin-bottom:1.5rem;
+}
+.stl{flex:1;padding:.7rem .6rem;text-align:center;font-size:.7rem;font-weight:500;line-height:1.4}
+.stl-1{background:var(--ocean-pale);color:var(--ocean)}
+.stl-2{background:var(--jungle-pale);color:var(--jungle)}
+.stl-3{background:var(--amber-pale);color:var(--amber)}
+.stl-4{background:var(--dusk-pale);color:var(--dusk)}
+.stl span{display:block;font-size:.6rem;opacity:.75;margin-top:1px}
+
+.why-box{
+  background:#fff;border:1px solid var(--line);border-radius:var(--r);
+  padding:1rem 1.2rem;margin-bottom:1.5rem;font-size:.8rem;
+  color:var(--ink2);line-height:1.65;
+}
+.why-box strong{color:var(--ink);font-weight:500}
+
+.stay-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1.1rem;margin-bottom:1.5rem}
+.stay-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:box-shadow .2s}
+.stay-card:hover{box-shadow:0 8px 24px rgba(0,0,0,.08)}
+.stay-top{padding:1rem 1.1rem .85rem;display:flex;gap:.75rem;align-items:flex-start;border-bottom:1px solid var(--line)}
+.stay-num{
+  width:26px;height:26px;border-radius:50%;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  font-size:.7rem;font-weight:600;margin-top:1px;
+}
+.sn-1{background:var(--ocean-pale);color:var(--ocean)}
+.sn-2{background:var(--jungle-pale);color:var(--jungle)}
+.sn-3{background:var(--amber-pale);color:var(--amber)}
+.sn-4{background:var(--dusk-pale);color:var(--dusk)}
+.stay-loc{font-size:.88rem;font-weight:500;color:var(--ink);line-height:1.2}
+.stay-dates{font-size:.65rem;color:var(--muted);margin-top:2px}
+.stay-body{padding:.85rem 1.1rem}
+.stay-hotel{font-size:.82rem;font-weight:500;color:var(--ink);margin-bottom:2px}
+.stay-type{font-size:.67rem;color:var(--muted);margin-bottom:.7rem}
+.srow{display:flex;justify-content:space-between;margin-bottom:.35rem}
+.slabel{font-size:.65rem;color:var(--muted)}
+.sval{font-size:.65rem;font-weight:500;color:var(--ink)}
+.sbadge{
+  display:inline-block;font-size:.6rem;font-weight:500;
+  padding:.2rem .65rem;border-radius:100px;margin-top:.55rem;
+}
+.sb-mid  {background:var(--ocean-pale);color:var(--ocean)}
+.sb-nice {background:var(--jungle-pale);color:var(--jungle)}
+.sb-budget{background:var(--amber-pale);color:var(--amber)}
+.sb-night{background:var(--dusk-pale);color:var(--dusk)}
+.stay-why{
+  font-size:.68rem;color:var(--muted);line-height:1.5;
+  background:var(--sand);border-radius:7px;padding:.55rem .7rem;margin-top:.7rem;
+}
+
+.budget-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.75rem}
+.budget-cell{background:#fff;border:1px solid var(--line);border-radius:10px;padding:.75rem .9rem}
+.bc-label{font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:.3rem}
+.bc-val{font-size:.92rem;font-weight:500;color:var(--ink)}
+.bc-sub{font-size:.6rem;color:var(--muted);margin-top:1px}
+.bc-total{border-color:var(--ink2)}
+
+/* ═══════════════ TRANSPORT ═══════════════ */
+.transport-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1rem;margin-bottom:1.5rem}
+.tp-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:1rem 1.1rem}
+.tp-card-icon{font-size:1.4rem;margin-bottom:.6rem}
+.tp-card-title{font-size:.85rem;font-weight:500;color:var(--ink);margin-bottom:.3rem}
+.tp-card-desc{font-size:.73rem;color:var(--muted);line-height:1.55}
+.tp-card-days{font-size:.65rem;font-weight:500;margin-top:.6rem;padding:.2rem .6rem;border-radius:100px;display:inline-block}
+
+.rule-list{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.rule-list li{
+  font-size:.78rem;color:var(--ink2);line-height:1.55;
+  padding:.7rem .9rem;background:#fff;border-radius:9px;
+  border:1px solid var(--line);display:flex;gap:.6rem;align-items:flex-start;
+}
+.rule-list li::before{content:'→';color:var(--muted);flex-shrink:0;margin-top:1px}
+
+/* ═══════════════ ANIMATIONS ═══════════════ */
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes cardUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.day-card:nth-child(1){animation-delay:.04s}
+.day-card:nth-child(2){animation-delay:.08s}
+.day-card:nth-child(3){animation-delay:.12s}
+.day-card:nth-child(4){animation-delay:.16s}
+.day-card:nth-child(5){animation-delay:.20s}
+.day-card:nth-child(6){animation-delay:.24s}
+.day-card:nth-child(7){animation-delay:.28s}
+.day-card:nth-child(8){animation-delay:.32s}
+.day-card:nth-child(9){animation-delay:.36s}
+.day-card:nth-child(10){animation-delay:.40s}
+
+/* ═══════════════ FOOTER ═══════════════ */
+footer{
+  background:var(--ink);color:rgba(255,255,255,.4);
+  text-align:center;padding:2rem 1.5rem;
+  font-size:.7rem;letter-spacing:.07em;
+}
+footer strong{color:rgba(255,255,255,.8);font-weight:500}
+
+@media(max-width:600px){
+  .hero-h1{font-size:3.2rem}
+  .day-grid,.stay-grid,.transport-grid{grid-template-columns:1fr}
+  .stay-timeline{flex-direction:column;border-radius:10px}
+  .stl{border-bottom:1px solid var(--line)}
+  .stl:last-child{border-bottom:none}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="hero-art"></div>
+  <div class="hero-dots"></div>
+  <div class="palm palm-l"></div>
+  <div class="palm palm-r"></div>
+  <div class="horizon"></div>
+  <div class="hero-body">
+    <p class="hero-eyebrow">June 5 – 14, 2025 &nbsp;·&nbsp; 3 Travellers &nbsp;·&nbsp; Bali, Indonesia</p>
+    <h1 class="hero-h1">Bali<em>ten days of magic</em></h1>
+    <p class="hero-desc">Rice terraces at dawn. Jungle rapids. Dirt tracks through volcano country. Black sand beaches, fire dances, and the best cocktails in Seminyak. This is ours.</p>
+    <div class="hero-tags">
+      <span class="htag">🌊 White Water Rafting</span>
+      <span class="htag">🏍️ Dirt Bike Trails</span>
+      <span class="htag">📸 The Ubud Swing</span>
+      <span class="htag">🤿 Snorkel at Jemeluk</span>
+      <span class="htag">🪂 Bungee Jump</span>
+      <span class="htag">💃 Kecak Fire Dance</span>
+      <span class="htag">🎶 La Favela Night</span>
+      <span class="htag">🛕 Tanah Lot Sunset</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ STICKY NAV ═══ -->
+<nav class="sticky-nav">
+  <button class="nav-tab active" onclick="showTab('itinerary',this)">📅 Itinerary</button>
+  <button class="nav-tab" onclick="showTab('stays',this)">🏡 Stays</button>
+  <button class="nav-tab" onclick="showTab('transport',this)">🛵 Transport</button>
+</nav>
+
+<!-- ═══════════════════════════════════
+     TAB 1 — ITINERARY
+════════════════════════════════════ -->
+<div class="section visible" id="tab-itinerary">
+  <h2 class="sec-heading">The Itinerary</h2>
+  <p class="sec-sub">Jun 5 arrival (8:30 PM) → Jun 14 departure (2:00 PM) · Filter by vibe</p>
+  <div class="filter-row">
+    <button class="ftab active" onclick="filter('all',this)">All 10 days</button>
+    <button class="ftab" onclick="filter('adv',this)">🏄 Adventure</button>
+    <button class="ftab" onclick="filter('cult',this)">🛕 Culture</button>
+    <button class="ftab" onclick="filter('photo',this)">📸 Photo</button>
+    <button class="ftab" onclick="filter('night',this)">🎶 Nightlife</button>
+    <button class="ftab" onclick="filter('travel',this)">✈️ Travel</button>
+  </div>
+  <div class="day-grid" id="daygrid">
+
+    <!-- DAY 1 -->
+    <div class="day-card" data-tags="travel">
+      <div class="card-bar bar-travel"></div>
+      <div class="card-top">
+        <span class="day-pill pill-travel">Day 1 · Jun 5</span>
+        <div><div class="card-title">Arrive &amp; Settle In</div><div class="card-sub">Land 8:30 PM → Canggu</div></div>
+      </div>
+      <div class="card-body">
+        <div class="tp-row"><span class="tp tp-g">🟠 Grab from airport</span></div>
+        <div class="act"><span class="ai">✈️</span><div class="at"><strong>Clear immigration</strong> — budget 45–60 min at Ngurah Rai. Grab to Canggu ~IDR 100–150k. Ecozy Dijiwa is your first base.</div></div>
+        <div class="act"><span class="ai">🏨</span><div class="at"><strong>Check in, freshen up.</strong> Tonight is just rest. You've had a long travel day — don't plan anything.</div></div>
+        <div class="act"><span class="ai">🍜</span><div class="at"><strong>Late dinner nearby</strong> — warungs around Canggu stay open past 10pm. Nasi goreng, fresh coconut, cold Bintang.</div></div>
+        <div class="ctip">💡 Message Bollu Garage or G'Day Rentals on WhatsApp tonight for scooter delivery tomorrow morning.</div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day-card" data-tags="cult">
+      <div class="card-bar bar-cult"></div>
+      <div class="card-top">
+        <span class="day-pill pill-cult">Day 2 · Jun 6</span>
+        <div><div class="card-title">Canggu + Tanah Lot Sunset</div><div class="card-sub">Beach → Temple → Old Man's Bar</div></div>
+      </div>
+      <div class="card-body">
+        <div class="tp-row"><span class="tp tp-s">🛵 Scooters delivered to villa</span></div>
+        <div class="act"><span class="ai">🛵</span><div class="at"><strong>Scooters arrive.</strong> Morning orientation ride around Canggu's quieter backstreets — low stakes, good confidence builder.</div></div>
+        <div class="act"><span class="ai">🏖️</span><div class="at"><strong>Batu Bolong Beach</strong> — watch surfers, walk the sand, lunch at a beachside café.</div></div>
+        <div class="act"><span class="ai">🛕</span><div class="at"><strong>Tanah Lot Temple at sunset</strong> — 45 min scooter ride. Arrive by 5:30pm. The sea temple on a rock stack at golden hour is exactly as good as it looks. Entry ~IDR 75k pp.</div></div>
+        <div class="act"><span class="ai">🍺</span><div class="at"><strong>Old Man's bar</strong> — Canggu's iconic beachfront bar. Grab home after drinks — don't scooter at night.</div></div>
+        <div class="ctip">💡 Coastal ride to Tanah Lot at golden hour is stunning — flat road, easy navigation. Perfect Day 2.</div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div class="day-card" data-tags="cult">
+      <div class="card-bar bar-cult"></div>
+      <div class="card-top">
+        <span class="day-pill pill-cult">Day 3 · Jun 7</span>
+        <div><div class="card-title">Ubud Culture Day</div><div class="card-sub">Monkey Forest → Art Market → Kecak Fire Dance</div></div>
+      </div>
+      <div class="card-body">
+        <div class="tp-row"><span class="tp tp-s">🛵 Scooter to Ubud</span><span class="tp tp-g">🟠 Grab to Uluwatu</span></div>
+        <div class="act"><span class="ai">🐒</span><div class="at"><strong>Scooter to Ubud</strong> (~50 min). <strong>Sacred Monkey Forest</strong> at 9am — ancient temples, jungle trails, 700+ macaques. ~IDR 120k pp. Don't bring food!</div></div>
+        <div class="act"><span class="ai">🎨</span><div class="at"><strong>Ubud art market + Jl. Hanoman</strong> — batik, silver, woven goods. Lunch at a warung (~IDR 30k). <em>Pick up a flowing gown here for the swing tomorrow!</em></div></div>
+        <div class="act"><span class="ai">💃</span><div class="at"><strong>Kecak Fire Dance at Uluwatu</strong> — take a Grab south. Book the 6pm show in advance. Ramayana fire performance, 100 chanters, cliff-edge Indian Ocean sunset. ~IDR 100–150k pp.</div></div>
+        <div class="act"><span class="ai">🏨</span><div class="at"><strong>Check into Alaya Resort Ubud</strong> tonight — move base from Canggu to Ubud. Everything for Days 4, 5, 6 is now on your doorstep.</div></div>
+        <div class="ctip">💡 Book Kecak tickets in advance — the 6pm show sells out fast. Arrive at 5pm for good seats.</div>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day-card" data-tags="photo cult">
+      <div class="card-bar bar-photo"></div>
+      <div class="card-top">
+        <span class="day-pill pill-photo">Day 4 · Jun 8</span>
+        <div><div class="card-title">Rice Terraces + The Swing 📸</div><div class="card-sub">Tegallalang → Aloha Ubud Swing</div></div>
+      </div>
+      <div class="card-body">
+        <div class="tp-row"><span class="tp tp-s">🛵 Short scooter ride from Alaya</span></div>
+        <div class="act"><span class="ai">🌾</span><div class="at"><strong>Tegallalang Rice Terraces</strong> — leave 7:30am for 8am arrival. UNESCO stepped paddy fields in morning light. Walk the trails. Small donation entry.</div></div>
+        <div class="act"><span class="ai">📸</span><div class="at"><strong>Aloha Ubud Swing</strong> (10 min away) — THE iconic Bali swing. Bring the gown from yesterday's market. Staff photograph you on your phone — they're genuinely good. Multiple swing heights. Book photo package. ~IDR 200–400k pp.</div></div>
+        <div class="act"><span class="ai">☕</span><div class="at"><strong>Jungle café lunch</strong> — rice terrace views, infinity pool backdrop, Indonesian food ~IDR 80–120k pp.</div></div>
+        <div class="act"><span class="ai">🧖</span><div class="at"><strong>Afternoon at Alaya spa</strong> — book a Balinese massage or flower bath for the evening. Well-earned after two full days.</div></div>
+        <div class="ctip">💡 From Alaya, Tegallalang is only 20 min — no more 45-min Canggu slogs. This is why moving your base matters.</div>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div class="day-card" data-tags="adv">
+      <div class="card-bar bar-adv"></div>
+      <div class="card-top">
+        <span class="day-pill pill-adv">Day 5 · Jun 9</span>
+        <div><div class="card-title">Dirt Bike Adventure 🏍️</div><div class="card-sub">Jungle trails · River crossings · Luwak coffee</div></div>
+      </div>
+      <div class="card-body">
+        <div class="tp-row"><span class="tp tp-s">🛵 Short scooter to ATV base</span></div>
+        <div class="act"><span class="ai">🏍️</span><div class="at"><strong>ATV Ubud Bali</strong> — jungle trails, river crossings, rice fields, cave. ~1.5 hrs. Safety gear, briefing, lunch buffet included. ~IDR 350–550k pp.</div></div>
+        <div class="act"><span class="ai">☕</span><div class="at"><strong>Luwak coffee plantation</strong> — often included or a short detour. Taste the famous civet coffee. Usually free or very cheap.</div></div>
+        <div class="act"><span class="ai">🍖</span><div class="at"><strong>Late lunch: Warung Babi Guling</strong> — Bali's famous spit-roast suckling pig. ~IDR 50–80k pp. Go before 2pm — they sell out.</div></div>
+        <div class="ctip">💡 Wear clothes you can get muddy! June dry season = dusty trails, perfect conditions. Bring a change of outfit.</div>
+      </div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div class="day-card" data-tags="adv">
+      <div class="card-bar bar-adv"></div>
+      <div class="card-top">
+        <span class="day-pill pill-adv">Day 6 · Jun 10</span>
+        <div><div class="card-title">White Water Rafting + Drive to Amed 🌊</div><div class="card-sub">Ayung River gorge → Tirta Gangga → Amed</div></div>
+      </div>
+      <div class="card-body">
+        <div class="tp-row"><span class="tp tp-c">🚗 Private car + driver all day</span></div>
+        <div class="act"><span class="ai">🚗</span><div class="at"><strong>Car + driver for the full day</strong> (~IDR 600–750k total ÷ 3). Driver holds bags while you raft, then drives east to Amed. Arrange through Alaya the night before.</div></div>
+        <div class="act"><span class="ai">🌊</span><div class="at"><strong>Ayung River white water rafting</strong> (9am). 2 hrs, Grade 2–3 rapids through dense jungle gorge, past waterfalls and stone carvings. Helmets, life jackets, buffet lunch included. Book <strong>Mason Adventures</strong> or <strong>Bali Adventure Tours</strong>. ~IDR 350–450k pp.</div></div>
+        <div class="act"><span class="ai">🌺</span><div class="at"><strong>Stop: Tirta Gangga Water Palace</strong> en route — royal koi garden, stone fountains, ~IDR 50k entry. Perfect 45-min stop.</div></div>
+        <div class="act"><span class="ai">🌙</span><div class="at"><strong>Arrive Amed ~5–6pm.</strong> Check into Amed Sari Beach Guesthouse. Fresh grilled fish on the black sand beach.</div></div>
+        <div class="ctip">💡 Rafting in the morning → shower at base → car drives east. The Ayung gorge light is best early too.</div>
+      </div>
+    </div>
+
+    <!-- DAY 7 -->
+    <div class="day-card" data-tags="adv cult">
+      <div class="card-bar bar-mixed"></div>
+      <div class="card-top">
+        <span class="day-pill pill-mixed">Day 7 · Jun 11</span>
+        <div><div class="card-title">Explore Amed + Snorkel</div><div class="card-sub">Fishing villages · Jemeluk Bay · Sunrise</div></div>
+      </div>
+      <div class="card-body">
+        <div class="tp-row"><span class="tp tp-s">🛵 Local scooter rental ~IDR 70k/day</span></div>
+        <div class="act"><span class="ai">🌅</span><div class="at"><strong>Sunrise on the beach</strong> — Amed faces east. Set alarm for 5:45am. Lombok silhouette, pink sky, complete silence. Worth every second.</div></div>
+        <div class="act"><span class="ai">🛵</span><div class="at"><strong>Coastal scooter ride</strong> through Jemeluk, Bunutan, Lipah, Selang — quiet roads, traditional outrigger fishing boats on every black sand beach.</div></div>
+        <div class="act"><span class="ai">🐠</span><div class="at"><strong>Snorkel at Jemeluk Bay</strong> — wade straight in from the beach. Crystal visibility, healthy coral wall, turtles common. Fins + mask rental ~IDR 50k.</div></div>
+        <div class="act"><span class="ai">🌿</span><div class="at">Afternoon: hike the hill behind the village for Agung and Lombok views. Cheapest, freshest fish on the island at local warungs.</div></div>
+        <div class="ctip">💡 Amed roads are the safest, most enjoyable scooter riding of the whole trip — flat coastal road, almost no traffic.</div>
+      </div>
+    </div>
+
+    <!-- DAY 8 -->
+    <div class="day-card" data-tags="adv travel">
+      <div class="card-bar bar-adv"></div>
+      <div class="card-top">
+        <span class="day-pill pill-adv">Day 8 · Jun 12</span>
+        <div><div class="card-title">Bungee Jump + Move to Seminyak 🪂</div><div class="card-sub">Amed → Lempuyang (optional) → 5GX Kuta</div></div>
+      </div>
+      <div class="card-body">
+        <div class="tp-row"><span class="tp tp-c">🚗 Private car + driver all day</span></div>
+        <div class="act"><span class="ai">🌄</span><div class="at"><strong>Optional: Pura Lempuyang</strong> — 7am, 30 min from Amed. Twin temple gates frame Mt. Agung perfectly. One of Bali's best photo moments. ~IDR 50k. Tell driver night before.</div></div>
+        <div class="act"><span class="ai">🪂</span><div class="at"><strong>5GX Bali, Kuta</strong> — slingshot bungee on Jl. Legian. All three of you ride simultaneously, launching near-vertical. 4.7★, 470+ reviews. ~IDR 400k pp. <strong>Book ahead at 5gxbali.com</strong></div></div>
+        <div class="act"><span class="ai">🏨</span><div class="at"><strong>Check into Hygge Hotel Seminyak</strong> for the final night. Dinner out — the nightlife finale starts tomorrow!</div></div>
+        <div class="ctip">💡 Lempuyang at 7am before crowds = completely different experience. Worth the early alarm if you can manage it.</div>
+      </div>
+    </div>
+
+    <!-- DAY 9 -->
+    <div class="day-card" data-tags="night">
+      <div class="card-bar bar-night"></div>
+      <div class="card-top">
+        <span class="day-pill pill-night">Day 9 · Jun 13</span>
+        <div><div class="card-title">Potato Head + La Favela Night 🍹</div><div class="card-sub">Beach club sunset → Nightlife finale</div></div>
+      </div>
+      <div class="card-body">
+        <div class="tp-row"><span class="tp tp-s">🛵 Daytime</span><span class="tp tp-g">🟠 Grab at night</span></div>
+        <div class="act"><span class="ai">🛵</span><div class="at"><strong>Morning: Seminyak boutiques</strong> — Jl. Laksamana for local fashion, art prints, silver. Last round of souvenirs.</div></div>
+        <div class="act"><span class="ai">🏊</span><div class="at"><strong>Potato Head Beach Club</strong> — arrive 4pm for sunset spots. Beachfront pool, great DJs, iconic architecture. Minimum spend ~IDR 150k pp (easily 2 drinks). Stay for the sunset set.</div></div>
+        <div class="act"><span class="ai">🎶</span><div class="at"><strong>La Favela, Seminyak</strong> — opens 7pm. Six bar areas, Spanish hacienda décor, legendary cocktails. Try the rum brûlée. Dancing until 3–4am. Your nightlife highlight.</div></div>
+        <div class="ctip">💡 Leave scooters at Hygge — always Grab after nightlife. La Favela is a short Grab from all Seminyak stays.</div>
+      </div>
+    </div>
+
+    <!-- DAY 10 -->
+    <div class="day-card" data-tags="travel">
+      <div class="card-bar bar-travel"></div>
+      <div class="card-top">
+        <span class="day-pill pill-travel">Day 10 · Jun 14</span>
+        <div><div class="card-title">Farewell Morning → Airport ✈️</div><div class="card-sub">Depart 2:00 PM · Leave hotel by 11:30am</div></div>
+      </div>
+      <div class="card-body">
+        <div class="tp-row"><span class="tp tp-g">🟠 Grab to airport</span></div>
+        <div class="act"><span class="ai">🌸</span><div class="at"><strong>Slow brunch</strong> — Seminyak has great spots open from 8am. After La Favela, no pressure to rush.</div></div>
+        <div class="act"><span class="ai">🛍️</span><div class="at"><strong>Last-minute shopping</strong> — Seminyak Square or Jl. Kayu Aya. Return scooters (Hygge can call for pickup).</div></div>
+        <div class="act"><span class="ai">🍛</span><div class="at"><strong>Farewell lunch by 11am</strong> — beachfront warung, fresh grilled fish, one last Bintang.</div></div>
+        <div class="act"><span class="ai">✈️</span><div class="at"><strong>Grab to Ngurah Rai by 11:30am</strong> — 20–30 min. Need 2+ hours for a 2pm international departure. Don't cut it fine!</div></div>
+        <div class="ctip">💡 Ngurah Rai can queue midday. Be at the airport by 11:45am at the absolute latest.</div>
+      </div>
+    </div>
+
+  </div><!-- /day-grid -->
+</div>
+
+<!-- ═══════════════════════════════════
+     TAB 2 — STAYS
+════════════════════════════════════ -->
+<div class="section" id="tab-stays">
+  <h2 class="sec-heading">Where We're Staying</h2>
+  <p class="sec-sub">4 locations · move with the action · one splurge, rest are smart picks</p>
+
+  <div class="stay-timeline">
+    <div class="stl stl-1"><strong>① Canggu</strong><span>Jun 5–7 · 2 nights</span></div>
+    <div class="stl stl-2"><strong>② Ubud</strong><span>Jun 8–10 · 3 nights</span></div>
+    <div class="stl stl-3"><strong>③ Amed</strong><span>Jun 11–12 · 2 nights</span></div>
+    <div class="stl stl-4"><strong>④ Seminyak</strong><span>Jun 13 · 1 night</span></div>
+  </div>
+
+  <div class="why-box">
+    Old plan had us riding back to <strong>Canggu every evening from Ubud</strong> (45 min each way). Moving to Ubud for Days 4–6 puts the swing, ATV, and rafting all within 10–20 minutes. Seminyak at the end is one night purely for La Favela and the airport run.
+  </div>
+
+  <div class="stay-grid">
+    <!-- Stay 1 -->
+    <div class="stay-card">
+      <div class="stay-top">
+        <div class="stay-num sn-1">1</div>
+        <div><div class="stay-loc">Canggu</div><div class="stay-dates">Jun 5 (arrival) – Jun 7 · 2 nights</div></div>
+      </div>
+      <div class="stay-body">
+        <div class="stay-hotel">Ecozy Dijiwa Canggu</div>
+        <div class="stay-type">Boutique hotel · Batu Mejan area</div>
+        <div class="srow"><span class="slabel">Rating</span><span class="sval">4.8★ · 277 reviews</span></div>
+        <div class="srow"><span class="slabel">Est. cost/night</span><span class="sval">~IDR 600–900k</span></div>
+        <div class="srow"><span class="slabel">Approx per person</span><span class="sval">~₹1,000–1,500/night</span></div>
+        <span class="sbadge sb-mid">Mid-range boutique</span>
+        <div class="stay-why">Pool, barista coffee, walking distance to Batu Bolong Beach and the Canggu café strip. Great staff, very clean. Right level of comfort for an arrival night — not too flashy, not bare-bones.</div>
+      </div>
+    </div>
+    <!-- Stay 2 -->
+    <div class="stay-card">
+      <div class="stay-top">
+        <div class="stay-num sn-2">2</div>
+        <div><div class="stay-loc">Ubud</div><div class="stay-dates">Jun 8–10 · 3 nights ✨</div></div>
+      </div>
+      <div class="stay-body">
+        <div class="stay-hotel">Alaya Resort Ubud</div>
+        <div class="stay-type">Resort · Jl. Raya Pengosekan</div>
+        <div class="srow"><span class="slabel">Rating</span><span class="sval">4.7★ · 3,500+ reviews</span></div>
+        <div class="srow"><span class="slabel">Est. cost/night</span><span class="sval">~IDR 1.2–1.8M</span></div>
+        <div class="srow"><span class="slabel">Approx per person</span><span class="sval">~₹2,000–3,000/night</span></div>
+        <span class="sbadge sb-nice">Splurge stay ✨</span>
+        <div class="stay-why">Walkable to Monkey Forest, Ubud market, restaurants. Rice terrace views, gorgeous pool, on-site Balinese spa. This is the "nice place" — 3 nights here after activity-heavy days is exactly the reward the trip deserves. Book early, fills up fast in June.</div>
+      </div>
+    </div>
+    <!-- Stay 3 -->
+    <div class="stay-card">
+      <div class="stay-top">
+        <div class="stay-num sn-3">3</div>
+        <div><div class="stay-loc">Amed</div><div class="stay-dates">Jun 11–12 · 2 nights</div></div>
+      </div>
+      <div class="stay-body">
+        <div class="stay-hotel">Amed Sari Beach Guesthouse</div>
+        <div class="stay-type">Beachfront guesthouse · Purwakerti</div>
+        <div class="srow"><span class="slabel">Rating</span><span class="sval">4.3★ · 103 reviews</span></div>
+        <div class="srow"><span class="slabel">Est. cost/night</span><span class="sval">~IDR 200–350k</span></div>
+        <div class="srow"><span class="slabel">Approx per person</span><span class="sval">~₹330–580/night</span></div>
+        <span class="sbadge sb-budget">Budget-friendly</span>
+        <div class="stay-why">Right on the beach. Breakfast included. Owner Wyman is mentioned warmly in review after review. Amed is so low-key that a fancy room would feel out of place — save the money and spend it on the rafting and snorkelling. Dive centre next door.</div>
+      </div>
+    </div>
+    <!-- Stay 4 -->
+    <div class="stay-card">
+      <div class="stay-top">
+        <div class="stay-num sn-4">4</div>
+        <div><div class="stay-loc">Seminyak</div><div class="stay-dates">Jun 13 · 1 night only</div></div>
+      </div>
+      <div class="stay-body">
+        <div class="stay-hotel">Hygge Hotel &amp; Villas Seminyak</div>
+        <div class="stay-type">Boutique hotel · Jl. Petitenget</div>
+        <div class="srow"><span class="slabel">Rating</span><span class="sval">5.0★ · 122 reviews</span></div>
+        <div class="srow"><span class="slabel">Est. cost/night</span><span class="sval">~IDR 700k–1.1M</span></div>
+        <div class="srow"><span class="slabel">Approx per person</span><span class="sval">~₹1,150–1,850/night</span></div>
+        <span class="sbadge sb-night">Nightlife location</span>
+        <div class="stay-why">10 min walk to Potato Head, easy Grab to La Favela. Brand new, spotless, private pool villa option. One night but you want to be in the right spot for the finale. Perfect position for the airport Grab next morning.</div>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.75rem">Rough accommodation budget — per person · 9 nights total</p>
+  <div class="budget-row">
+    <div class="budget-cell"><div class="bc-label">Canggu · 2 nights</div><div class="bc-val">~₹2,000–3,000</div><div class="bc-sub">Ecozy · per person</div></div>
+    <div class="budget-cell"><div class="bc-label">Ubud · 3 nights</div><div class="bc-val">~₹6,000–9,000</div><div class="bc-sub">Alaya · per person</div></div>
+    <div class="budget-cell"><div class="bc-label">Amed · 2 nights</div><div class="bc-val">~₹660–1,160</div><div class="bc-sub">Amed Sari · per person</div></div>
+    <div class="budget-cell"><div class="bc-label">Seminyak · 1 night</div><div class="bc-val">~₹1,150–1,850</div><div class="bc-sub">Hygge · per person</div></div>
+    <div class="budget-cell bc-total"><div class="bc-label">Total per person</div><div class="bc-val">~₹9,800–15,000</div><div class="bc-sub">9 nights · all stays</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════
+     TAB 3 — TRANSPORT
+════════════════════════════════════ -->
+<div class="section" id="tab-transport">
+  <h2 class="sec-heading">Getting Around</h2>
+  <p class="sec-sub">Smart split — scooters for short scenic rides, car for long hauls, Grab at night</p>
+
+  <div class="transport-grid">
+    <div class="tp-card">
+      <div class="tp-card-icon">🛵</div>
+      <div class="tp-card-title">Scooter — short rides &amp; scenic days</div>
+      <div class="tp-card-desc">Rent from Bollu Garage or G'Day Rentals in Canggu (~IDR 70–90k/day). Delivered to your door. Best for Ubud backroads, Tegallalang, Canggu-area rides, and Amed's coastal road — all quiet, low-speed, beautiful.</div>
+      <span class="tp-card-days" style="background:var(--jungle-pale);color:var(--jungle)">Days 2, 3, 4, 5, 7, 9</span>
+    </div>
+    <div class="tp-card">
+      <div class="tp-card-icon">🚗</div>
+      <div class="tp-card-title">Private car + driver — long hauls</div>
+      <div class="tp-card-desc">For the Ubud→Amed journey (Day 6) and Amed→Kuta (Day 8). ~IDR 600–750k for a full day, split 3 ways. Your hotel arranges it the night before. Driver waits at each stop — you arrive relaxed, not exhausted.</div>
+      <span class="tp-card-days" style="background:var(--ocean-pale);color:var(--ocean)">Days 6 and 8</span>
+    </div>
+    <div class="tp-card">
+      <div class="tp-card-icon">🟠</div>
+      <div class="tp-card-title">Grab — airport, evenings &amp; nightlife</div>
+      <div class="tp-card-desc">Bali's Grab (like Uber) is cheap, reliable, and essential for nightlife. Never scooter after drinks. Also use it for the Uluwatu evening (Day 3) and airport on Day 1 and Day 14.</div>
+      <span class="tp-card-days" style="background:var(--rust-pale);color:var(--rust)">Days 1, 3, 9, 14</span>
+    </div>
+    <div class="tp-card">
+      <div class="tp-card-icon">🚶</div>
+      <div class="tp-card-title">Walk — Ubud is made for it</div>
+      <div class="tp-card-desc">From Alaya Resort, the Monkey Forest, Ubud market, and dozens of restaurants are all walkable. On rafting and ATV days, operators pick you up. Adventure Divers in Amed also collects from your guesthouse.</div>
+      <span class="tp-card-days" style="background:var(--slate-pale);color:var(--slate)">Days 4, 5, 7</span>
+    </div>
+  </div>
+
+  <p style="font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.1em;text-transform:uppercase;margin:1.5rem 0 .75rem">Golden rules</p>
+  <ul class="rule-list">
+    <li>Never scooter at night, especially after a drink. Grab is cheap and always available.</li>
+    <li>Fuel scooters yourself at Pertamina stations — avoid touts offering overpriced petrol in bottles near tourist spots.</li>
+    <li>Amed roads are the most relaxed scooter riding of the trip — flat, quiet, coastal. Great for anyone a bit nervous.</li>
+    <li>On car days, WhatsApp your hotel reception the evening before to arrange the driver — don't leave it to the morning.</li>
+    <li>Grab works well in South Bali (Seminyak, Kuta, Canggu) and Ubud. In Amed, your guesthouse owner Wyman can arrange local taxis.</li>
+    <li>Return scooters before your final Grab to the airport on Day 14. Bollu Garage and G'Day both do villa pick-up.</li>
+  </ul>
+</div>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <p><strong>Bali · June 5–14, 2025</strong> &nbsp;·&nbsp; Adventure · Culture · Nightlife</p>
+  <p style="margin-top:.5rem;font-size:.6rem;opacity:.4">Made with love — have the most incredible trip 🌴</p>
+</footer>
+
+<script>
+function showTab(id, el) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('visible');
+  el.classList.add('active');
+  window.scrollTo({top: document.querySelector('.sticky-nav').offsetTop, behavior: 'smooth'});
+}
+
+function filter(tag, el) {
+  document.querySelectorAll('.ftab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('.day-card').forEach(card => {
+    if (tag === 'all') { card.classList.remove('hidden'); return; }
+    card.classList.toggle('hidden', !card.dataset.tags.includes(tag));
+  });
+}
+</script>
+</body>
+</html>
